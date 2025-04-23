@@ -1,8 +1,30 @@
-# 🎛 TouchDesigner WLED Controller
+# 🟡🎛 TouchDesigner to WLED Controller (`control_WLED_v5`)
 
-A complete **TouchDesigner** project to control **WLED** lighting effects. This setup allows you to send JSON commands to an ESP32 running WLED, with full control via MIDI, visuals, and Python scripting.
+This repository provides a custom **TouchDesigner Base COMP** named `control_WLED_v5` that allows you to control your WLED-powered LED strips directly from TouchDesigner.
 
----
+## ✨ Features
+
+This component lets you dynamically control WLED via HTTP JSON requests with real-time interaction through TouchDesigner parameters.
+
+### Available Parameters
+
+| Parameter   | Type        | Description |
+|-------------|-------------|-------------|
+| `IP_WLED`   | String      | The IP address of the WLED device (e.g., `192.168.1.5`) |
+| `Segment`   | Integer     | The total number of LEDs in your strip (e.g., `300` for a 5-meter strip) |
+| `Couleur`   | RGB         | The RGB color to send to the LED strip |
+| `Favorite`  | Integer     | The ID of a preset saved in your WLED controller |
+| `Speed`     | Integer (0-255) | Controls the animation speed of the effect |
+| `Effect_A`  | Float (0.0-1.0) | Controls the intensity or additional parameter of the effect (fade, length, etc.) |
+| `Brightness`| Integer (0-255) | Sets the brightness of the LED strip |
+| `Blackout`  | Toggle      | Instantly turns off the LEDs when activated |
+
+## 🧠 How It Works
+
+- All parameter changes automatically trigger Python scripts within the component that format and send JSON requests to your WLED device.
+- These requests apply the appropriate effect, color, speed, and more to the LED strip.
+- A custom blackout toggle sends an `off` command when needed and restores previous settings when turned off.
+
 
 ## 📦 Project Structure
 
@@ -41,10 +63,20 @@ WLED_TD_Controller/
 
 ## ⚙️ Requirements
 
-- [WLED](https://kno.wled.ge/) (running on ESP32 or ESP8266)
+- [WLED](https://kno.wled.ge/) (running on ESP32 or ESP8266) connected to your Wi-Fi
 - [TouchDesigner](https://derivative.ca/) (tested with 2023+)
 - Python module: `requests` (already included in TD or install manually)
 - Local network access to WLED device
+- Ensure HTTP control is enabled in WLED (enabled by default)
+
+---
+
+## 🚀 Getting Started
+
+1. Open your TouchDesigner project.
+2. Drop or import the `control_WLED_v5` base component.
+3. Enter the IP address of your WLED in the `IP_WLED` parameter.
+4. Adjust other parameters to interact in real-time with your LEDs.
 
 ---
 
@@ -88,6 +120,11 @@ WLED_TD_Controller/
 
 ---
 
+## 🗣 Feedback & Contributions
+
+Feel free to fork this project, suggest improvements, or create pull requests for better integrations or new features.
+
+---
 ## 🧠 Credits
 
 Made with ❤️ using [WLED](https://kno.wled.ge/) and [TouchDesigner](https://derivative.ca/).  
