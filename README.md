@@ -2,10 +2,6 @@
 
 This repository provides a custom **TouchDesigner Base COMP** named `control_WLED_v1` that allows you to control your WLED-powered LED strips directly from TouchDesigner.
 
-## ✨ Features
-
-This component lets you dynamically control WLED via HTTP JSON requests and UDP requests with real-time interaction through TouchDesigner parameters.
-
 ### Available Parameters
 
 | Parameter   | Type        | Description |
