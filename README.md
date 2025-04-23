@@ -1,10 +1,10 @@
-# 🟡🎛 TouchDesigner to WLED Controller (`control_WLED_v5`)
+# 🟡🎛 TouchDesigner controlling WLED 
 
-This repository provides a custom **TouchDesigner Base COMP** named `control_WLED_v5` that allows you to control your WLED-powered LED strips directly from TouchDesigner.
+This repository provides a custom **TouchDesigner Base COMP** named `control_WLED_v1` that allows you to control your WLED-powered LED strips directly from TouchDesigner.
 
 ## ✨ Features
 
-This component lets you dynamically control WLED via HTTP JSON requests with real-time interaction through TouchDesigner parameters.
+This component lets you dynamically control WLED via HTTP JSON requests and UDP requests with real-time interaction through TouchDesigner parameters.
 
 ### Available Parameters
 
@@ -24,20 +24,6 @@ This component lets you dynamically control WLED via HTTP JSON requests with rea
 - All parameter changes automatically trigger Python scripts within the component that format and send JSON requests to your WLED device.
 - These requests apply the appropriate effect, color, speed, and more to the LED strip.
 - A custom blackout toggle sends an `off` command when needed and restores previous settings when turned off.
-
-
-## 📦 Project Structure
-
-WLED_TD_Controller/
-├── project.toe              # Main TouchDesigner file
-├── wled_presets.json        # JSON preset definitions for WLED
-├── scripts/
-│   ├── send_preset.py       # Sends JSON request to activate WLED preset
-│   ├── color_sync.py        # Sync LED color with TOP average color
-│   └── midi_mapping.py      # Maps MIDI button presses to effects
-├── docs/
-│   └── README.md            # Project documentation
-└── requirements.txt         # Python dependencies (e.g. requests)
 
 
 ---
@@ -101,6 +87,22 @@ WLED_TD_Controller/
 - Modify `/scripts/send_preset.py` to adjust how presets are triggered.
 - Update `midi_mapping.py` to change how MIDI inputs control effects.
 - Add or edit presets in `wled_presets.json` using the WLED API format.
+
+---
+
+
+## 📦 Project Structure
+
+WLED_TD_Controller/
+├── project.toe              # Main TouchDesigner file
+├── wled_presets.json        # JSON preset definitions for WLED
+├── scripts/
+│   ├── send_preset.py       # Sends JSON request to activate WLED preset
+│   ├── color_sync.py        # Sync LED color with TOP average color
+│   └── midi_mapping.py      # Maps MIDI button presses to effects
+├── docs/
+│   └── README.md            # Project documentation
+└── requirements.txt         # Python dependencies (e.g. requests)
 
 ---
 
