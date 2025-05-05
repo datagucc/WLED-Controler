@@ -1,4 +1,4 @@
-# TouchDesigner controlling WLED 
+<img width="724" alt="base_params" src="https://github.com/user-attachments/assets/18b09fb1-9a00-4b2f-bec3-2ae627749743" /># TouchDesigner controlling WLED 
 
 This repository provides a custom **TouchDesigner Base COMP** named `WLED_controller_v2` that allows you to control your WLED-powered LED strips directly from TouchDesigner.
 Manage **colors**, **effects**, **speed**, **intensity**, and **brightness** dynamically, using optimized **UDP** and **HTTP POST** communications.
@@ -21,6 +21,9 @@ Manage **colors**, **effects**, **speed**, **intensity**, and **brightness** dyn
 - Python module: `requests` (already included in TD or install manually)
 - Local network access to WLED device
 - Ensure HTTP control is enabled in WLED (enabled by default)
+
+## PREVIEW
+![WLED Controller params](Assets/base_params)
 
 ##  Features
 
@@ -126,6 +129,7 @@ if change bigger than threshold and after 1 sec:
 
 #### You can adapt and choose your 8 favorite effects in the script :
 mapping_favorite = {1:x, 2:y,3:z,...8:za}, and replace x,y,z,... by the number of your favorite effects.
+
 
 
 
