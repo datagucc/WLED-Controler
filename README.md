@@ -1,19 +1,9 @@
 # TouchDesigner controlling WLED 
 
 This repository provides a custom **TouchDesigner Base COMP** named `WLED_controller_v2` that allows you to control your WLED-powered LED strips directly from TouchDesigner.
-A complete TouchDesigner Base Component to control WLED in real-time.  
 Manage **colors**, **effects**, **speed**, **intensity**, and **brightness** dynamically, using optimized **UDP** and **HTTP POST** communications.
-
-
-##  Features
-
--  Live color control via UDP (support for up to 3 different colors).
--  Effects, speed, intensity, brightness updated through HTTP POST.
--  Mapping of favorite effect into 8 int parameters, in order to be used in a midi controler.
--  Deadzone and rate limiting prevent unnecessary overload.
--  Fully modular and ready to integrate into your projects.
--  Fully controllable from external devices like a MIDI controller.
-
+		
+	Example of WLED control during a live VJ performance :[Yungucc & Julea](https://www.youtube.com/watch?v=c6CEpSj563g&t=2102s) 
 
 ## Getting Started
 
@@ -30,6 +20,15 @@ Manage **colors**, **effects**, **speed**, **intensity**, and **brightness** dyn
 - Python module: `requests` (already included in TD or install manually)
 - Local network access to WLED device
 - Ensure HTTP control is enabled in WLED (enabled by default)
+
+##  Features
+
+-  Live color control via UDP (support for up to 3 different colors).
+-  Effects, speed, intensity, brightness updated through HTTP POST.
+-  Mapping of favorite effect into 8 int parameters, in order to be used in a midi controler.
+-  Deadzone and rate limiting prevent unnecessary overload.
+-  Fully modular and ready to integrate into your projects.
+-  Fully controllable from external devices like a MIDI controller.
 
 
 ##  Component Overview
@@ -87,7 +86,7 @@ Manage **colors**, **effects**, **speed**, **intensity**, and **brightness** dyn
 ##  Scripts
 
 
-###UDP_colors (CHOP Execute DAT)
+### UDP_colors (CHOP Execute DAT)
 
 	• Listens for changes in the colors_params.
 	• Builds a JSON structure with up to 3 colors.
@@ -108,7 +107,7 @@ build JSON -> send via udpout_colors
 
 
 
-###HTTP_POST_effects (CHOP Execute DAT)
+### HTTP_POST_effects (CHOP Execute DAT)
 
 	• Listens for changes in the effect_params.
 	• Rate-limits requests to 1 second minimum between each POST.
@@ -161,7 +160,7 @@ WLED_TD_Controller/
 ##  Future Ideas
 
 	• Implement multi-segment support.
-  • Optimize for multiple devices control in parallel.
+	• Optimize for multiple devices control in parallel.
 
 ---
 
@@ -174,5 +173,8 @@ Feel free to fork this project, suggest improvements, or create pull requests fo
 
 Made with ❤️ using [WLED](https://kno.wled.ge/) and [TouchDesigner](https://derivative.ca/).  
 Built for creative coding, performance, and fun.
+You can find me here : https://www.instagram.com/yungucc_/ 
+or here : https://www.youtube.com/@julea-yungucc
+
 
 ---
