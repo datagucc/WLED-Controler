@@ -1,4 +1,4 @@
-<img width="724" alt="base_params" src="https://github.com/user-attachments/assets/18b09fb1-9a00-4b2f-bec3-2ae627749743" /># TouchDesigner controlling WLED 
+# TouchDesigner controlling WLED 
 
 This repository provides a custom **TouchDesigner Base COMP** named `WLED_controller_v2` that allows you to control your WLED-powered LED strips directly from TouchDesigner.
 Manage **colors**, **effects**, **speed**, **intensity**, and **brightness** dynamically, using optimized **UDP** and **HTTP POST** communications.
