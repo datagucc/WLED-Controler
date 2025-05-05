@@ -23,7 +23,7 @@ Manage **colors**, **effects**, **speed**, **intensity**, and **brightness** dyn
 - Ensure HTTP control is enabled in WLED (enabled by default)
 
 ## PREVIEW
-![WLED Controller params](Assets/base_params)
+![WLED Controller params](Assets/base_params.png)
 
 ##  Features
 
